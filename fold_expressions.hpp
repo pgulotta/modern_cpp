@@ -10,7 +10,7 @@
 
 // C++17 style fold expression
 template <typename ... Ts>
-auto sum( Ts ... ts )
+auto sum_series( Ts ... ts )
 {
   return ( 0 + ... + ts );
 }
@@ -32,7 +32,7 @@ auto sum_generic( Ts ... ts )
 }
 
 template <typename ... Ts>
-auto logical_or( Ts ... ts )
+auto logical__or( Ts ... ts )
 {
   return ( ... || ts );
 }
@@ -70,8 +70,8 @@ void printLine( Args&& ... args )
 
 void test_fold_expressions()
 {
-  assert( sum( 1, 2, 3, 4, 5 )      == 15 );
-  assert( sum( 1, 2, 3, 4, 5, 6.5 ) == 21.5 );
+  assert( sum_series( 1, 2, 3, 4, 5 )      == 15 );
+  assert( sum_series( 1, 2, 3, 4, 5, 6.5 ) == 21.5 );
 
   std::string hello {"Hello"};
   std::string world {" world"};
@@ -80,8 +80,8 @@ void test_fold_expressions()
   assert( sum_generic( std::string( "a" ), std::string( "b" ), std::string( "c" ) ) == "abc" );
   assert( sum_generic( "a", "b", "c" ) == "abc" );
 
-  assert( logical_or()            == false );
-  assert( logical_or( false, true ) == true );
+  assert( logical__or()            == false );
+  assert( logical__or( false, true ) == true );
 
   assert( bitwise_or( 1, 2, 4 ) == 7 );
   assert( bitwise_or() == 0 );
