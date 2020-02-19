@@ -16,7 +16,7 @@
 #include "template_class_type_deduction.hpp"
 #include "lambda_expressions.hpp"
 #include "lambda_combine.hpp"
-
+#include "lambda_multicaller.hpp"
 
 int main()
 {
@@ -37,6 +37,11 @@ int main()
 //  test_map_insertion_hint();
 //  std::cout << "*************************" << std::endl << std::endl;
 //  test_lambda_expressions();
+//  std::cout << "*************************" << std::endl << std::endl;
+//  test_lambda_combine();
   std::cout << "*************************" << std::endl << std::endl;
-  test_lambda_combine();
+  test_lambda_multicaller();
+
+
+
 }
