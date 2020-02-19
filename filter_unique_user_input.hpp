@@ -5,7 +5,7 @@
 
 using namespace std;
 
-int test_filter_unique_user_input()
+void test_filter_unique_user_input()
 {
   set<string> s;
 

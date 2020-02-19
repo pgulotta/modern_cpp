@@ -25,7 +25,7 @@ void insert_sorted( C& v, const T& word )
   v.insert( it, word );
 }
 
-int test_keep_vector_sorted()
+void test_keep_vector_sorted()
 {
   list<string> v {"some", "random", "words", "without", "order", "aaa", "yyy"};
 

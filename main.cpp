@@ -14,25 +14,29 @@
 #include "map_insertion_hint.hpp"
 #include "structured_bindings.hpp"
 #include "template_class_type_deduction.hpp"
-
-
+#include "lambda_expressions.hpp"
+#include "lambda_combine.hpp"
 
 
 int main()
 {
-  test_fold_expressions();
+//  test_fold_expressions();
+//  std::cout << "*************************" << std::endl << std::endl;
+//  test_template_class_type_deduction();
+//  std::cout << "*************************" << std::endl << std::endl;
+//  test_structured_bindings();
+//  std::cout << "*************************" << std::endl << std::endl;
+//  test_efficient_insert_or_reassign_to_map();
+//  std::cout << "*************************" << std::endl << std::endl;
+//  test_erase_remove_idiom();
+//  std::cout << "*************************" << std::endl << std::endl;
+//  test_filter_unique_user_input();
+//  std::cout << "*************************" << std::endl << std::endl;
+//  test_keep_vector_sorted();
+//  std::cout << "*************************" << std::endl << std::endl;
+//  test_map_insertion_hint();
+//  std::cout << "*************************" << std::endl << std::endl;
+//  test_lambda_expressions();
   std::cout << "*************************" << std::endl << std::endl;
-  test_template_class_type_deduction();
-  std::cout << "*************************" << std::endl << std::endl;
-  test_structured_bindings();
-  std::cout << "*************************" << std::endl << std::endl;
-  test_efficient_insert_or_reassign_to_map();
-  std::cout << "*************************" << std::endl << std::endl;
-  test_erase_remove_idiom();
-  std::cout << "*************************" << std::endl << std::endl;
-  test_filter_unique_user_input();
-  std::cout << "*************************" << std::endl << std::endl;
-  test_keep_vector_sorted();
-  std::cout << "*************************" << std::endl << std::endl;
-  test_map_insertion_hint();
+  test_lambda_combine();
 }

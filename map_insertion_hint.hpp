@@ -6,7 +6,7 @@ using namespace std;
 
 using map_type = map<string, size_t>;
 
-int test_map_insertion_hint()
+void test_map_insertion_hint()
 {
   map_type m {{"b", 1}, {"c", 2}, {"d", 3}};
 
