@@ -3,7 +3,7 @@
 
 
 
-static void test_lambda_expressions()
+void test_lambda_expressions()
 {
   std::cout  << []( auto l, auto r ) { return l + r; }( 123, 456 )  << '\n';
 

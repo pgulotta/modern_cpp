@@ -17,6 +17,15 @@
 #include "lambda_expressions.hpp"
 #include "lambda_combine.hpp"
 #include "lambda_multicaller.hpp"
+#include "unique_ptr.hpp"
+#include "shared_ptr.hpp"
+#include "tuple.hpp"
+#include "shared_ptr_different_member.hpp"
+#include "shared_members.hpp"
+#include "shared_from_this.hpp"
+#include "optional.hpp"
+#include "apply_functions_on_tuples.hpp"
+#include "any.hpp"
 
 int main()
 {
@@ -39,8 +48,17 @@ int main()
 //  test_lambda_expressions();
 //  std::cout << "*************************" << std::endl << std::endl;
 //  test_lambda_combine();
-  std::cout << "*************************" << std::endl << std::endl;
-  test_lambda_multicaller();
+//  std::cout << "*************************" << std::endl << std::endl;
+//  test_lambda_multicaller();
+//  test_unique_ptr();
+//  test_shared_ptr();
+//  test_tuple();
+// test_shared_ptr_different_member();
+//  test_shared_members();
+// test_shared_from_this();
+  // test_apply_functions_on_tuples();
+// test_optional();
+// test_any();
 
 
 

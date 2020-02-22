@@ -24,7 +24,7 @@ auto combine( F binary_func, A a, B b )
 }
 
 
-static void test_lambda_combine()
+void test_lambda_combine()
 {
   auto a_xxx_b ( combine( std::logical_and<> {}, begins_with_a, ends_with_b ) );
 
