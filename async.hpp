@@ -1,3 +1,5 @@
+
+
 #include <iostream>
 #include <iomanip>
 #include <map>
@@ -8,46 +10,50 @@
 
 using namespace std;
 
-static map<char, size_t> histogram(const string &s)
+static map<char, size_t> histogram( const string& s )
 {
-    map<char, size_t> m;
+  map<char, size_t> m;
 
-    for (char c : s) { m[c] += 1; }
+  for ( char c : s ) { m[c] += 1; }
 
-    return m;
+  return m;
 }
 
-static string sorted(string s)
+static string sorted( string s )
 {
-    sort(begin(s), end(s));
-    return s;
+  sort( begin( s ), end( s ) );
+  return s;
 }
 
-static bool is_vowel(char c)
+static bool is_vowel( char c )
 {
-    char vowels[] {"aeiou"};
-    return end(vowels) != find(begin(vowels), end(vowels), c);
+  char vowels[] {"aeiou"};
+  return end( vowels ) != find( begin( vowels ), end( vowels ), c );
 }
 
-static size_t vowels(const string &s)
+static size_t vowels( const string& s )
 {
-    return count_if(begin(s), end(s), is_vowel);
+  return count_if( begin( s ), end( s ), is_vowel );
 }
 
 void test_async()
 {
-    cin.unsetf(ios::skipws);
-    string input {istream_iterator<char>{cin}, {}};
-    input.pop_back();
+  cin.unsetf( ios::skipws );
+  string input {istream_iterator<char>{cin}, {}};
+  input.pop_back();
 
-    auto hist        (async(launch::async, histogram, input));
-    auto sorted_str  (async(launch::async, sorted, input));
-    auto vowel_count (async(launch::async, vowels, input));
+//  auto hist        ( ( histogram, input ) );
+//  auto sorted_str  ( (  sorted, input ) );
+//  auto vowel_count ( ( vowels, input ) );
 
-    for(const auto &[c, count] : hist.get()) {
-        cout << c << ": " << count << '\n';
-    }
+  auto hist        ( async( launch::async, histogram, input ) );
+  auto sorted_str  ( async( launch::async, sorted, input ) );
+  auto vowel_count ( async( launch::async, vowels, input ) );
 
-    cout << "Sorted string: " << quoted(sorted_str.get()) << '\n';
-    cout << "Total vowels: " << vowel_count.get() << '\n';
+  for ( const auto &[c, count] : hist.get() ) {
+    cout << c << ": " << count << '\n';
+  }
+
+  cout << "Sorted string: " << quoted( sorted_str.get() ) << '\n';
+  cout << "Total vowels: " << vowel_count.get() << '\n';
 }

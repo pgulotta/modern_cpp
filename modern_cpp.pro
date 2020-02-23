@@ -9,3 +9,6 @@ SOURCES += \
         main.cpp
 
 HEADERS += $$files(*.hpp, true)
+
+LIBS += -pthread
+LIBS +=  -lstdc++
