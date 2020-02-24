@@ -27,10 +27,9 @@
 #include "apply_functions_on_tuples.hpp"
 #include "any.hpp"
 #include "async.hpp"
-//#include "auto_parallel.hpp"
 #include "mandelbrot.hpp"
 #include "multi_producer_consumer.hpp"
-//#include "producer_consumer.hpp"
+#include "producer_consumer.hpp"
 
 
 int main()
@@ -58,16 +57,16 @@ int main()
 //  test_lambda_multicaller();
 //  test_unique_ptr();
 //  test_shared_ptr();
-// test_tuple();
-// test_shared_ptr_different_member();
+//  test_tuple();
+//  test_shared_ptr_different_member();
 //  test_shared_members();
-// test_shared_from_this();
-  // test_apply_functions_on_tuples();
-// test_optional();
-// test_any();
-  //test_async();
-// test_mandelbrot();
-// test_multi_producer_consumer();
-// test_producer_consumer();
+//  test_shared_from_this();
+//  test_apply_functions_on_tuples();
+//  test_optional();
+//  test_any();
+//  test_async();
+//  test_mandelbrot();
+//  test_multi_producer_consumer();
+//  test_producer_consumer();
 
 }

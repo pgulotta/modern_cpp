@@ -1,8 +1,9 @@
 #include <iostream>
 #include <queue>
 #include <tuple>
-#include <condition_variable>
 #include <thread>
+#include <mutex>
+#include <condition_variable>
 
 using namespace std;
 using namespace chrono_literals;
@@ -13,7 +14,7 @@ mutex              mut;
 condition_variable cv;
 bool               finished {false};
 
-static void producer( size_t items )
+static void execute_producer( size_t items )
 {
   for ( size_t i {0}; i < items; ++i ) {
     this_thread::sleep_for( 100ms );
@@ -32,7 +33,7 @@ static void producer( size_t items )
   cv.notify_all();
 }
 
-static void consumer()
+static void execute_consumer()
 {
   while ( !finished ) {
     unique_lock<mutex> l {mut};
@@ -48,8 +49,8 @@ static void consumer()
 
 void test_producer_consumer()
 {
-  thread t1 {producer, 10};
-  thread t2 {consumer};
+  thread t1 {execute_producer, 10};
+  thread t2 {execute_consumer};
   t1.join();
   t2.join();
   cout << "finished!\n";
