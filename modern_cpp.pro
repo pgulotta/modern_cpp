@@ -3,8 +3,6 @@ CONFIG -= app_bundle
 CONFIG -= qt
 CONFIG += console c++17
 
-
-
 SOURCES += \
         main.cpp
 

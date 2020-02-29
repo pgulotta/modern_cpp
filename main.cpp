@@ -30,7 +30,8 @@
 #include "mandelbrot.hpp"
 #include "multi_producer_consumer.hpp"
 #include "producer_consumer.hpp"
-
+#include "function_composition.hpp"
+#include "currying.hpp"
 
 int main()
 {
@@ -68,5 +69,11 @@ int main()
 //  test_mandelbrot();
 //  test_multi_producer_consumer();
 //  test_producer_consumer();
+//  test_function_composition();
 
+  test_currying();
 }
+
+
+
+
