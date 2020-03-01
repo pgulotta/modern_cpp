@@ -32,6 +32,8 @@
 #include "producer_consumer.hpp"
 #include "function_composition.hpp"
 #include "currying.hpp"
+#include "functional_basics.hpp"
+
 
 int main()
 {
@@ -71,7 +73,7 @@ int main()
 //  test_producer_consumer();
 //  test_function_composition();
 
-  test_currying();
+  test_functional_basics();
 }
 
 
