@@ -33,7 +33,7 @@
 #include "function_composition.hpp"
 #include "currying.hpp"
 #include "functional_basics.hpp"
-
+#include "monad.hpp"
 
 int main()
 {
@@ -72,8 +72,8 @@ int main()
 //  test_multi_producer_consumer();
 //  test_producer_consumer();
 //  test_function_composition();
-
-  test_functional_basics();
+//  test_functional_basics();
+  test_monad();
 }
 
 
